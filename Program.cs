@@ -11,7 +11,7 @@ builder.Services.AddTransient<ITransientOperation,Operation>();
 builder.Services.AddSingleton<ISingletonOperation,Operation>();
 builder.Services.AddSingleton<ISingletonInstanceOperation>(new Operation(Guid.Empty));
 
-builder.Services.AddTransient<OperationService>();
+builder.Services.AddScoped<OperationService>();
 
 var app = builder.Build();
 
